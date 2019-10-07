@@ -6,7 +6,7 @@ rm(list = ls(all.names = TRUE)) # Clear the memory of variables from previous ru
 # source("SomethingSomething.R")
 
 # ---- load-packages -----------------------------------------------------------
-library(magrittr) #Pipes
+import::from(magrittr, "%>%")
 library(ggplot2) #For graphing
 requireNamespace("dplyr")
 # requireNamespace("RColorBrewer")

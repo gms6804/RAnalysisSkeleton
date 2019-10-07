@@ -9,7 +9,7 @@ rm(list = ls(all.names = TRUE)) # Clear the memory of variables from previous ru
 
 # ---- load-packages -----------------------------------------------------------
 # Attach these package(s) so their functions don't need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
-library(magrittr            , quietly=TRUE)
+import::from(magrittr, "%>%")
 
 # Verify these packages are available on the machine, but their functions need to be qualified: http://r-pkgs.had.co.nz/namespace.html#search-path
 requireNamespace("readr"        )
@@ -153,7 +153,7 @@ ds_month_oklahoma <-
     # fmla_hours       = sum(fmla_hours, na.rm=T)
     fte_approximated   = FALSE                           # This variable helps the later union query.
   ) %>%
-  dplyr::ungroup()                                       # Unecessary b/c of `summarize()`, but I like the habit.
+  dplyr::ungroup()                                       # Unnecessary b/c of `summarize()`, but I like the habit.
 ds_month_oklahoma
 
 # The SQL equivalent to the previous dplyr code.

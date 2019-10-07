@@ -4,7 +4,7 @@ rm(list = ls(all.names = TRUE)) # Clear the memory of variables from previous ru
 base::source(file="analysis/common/display-1.R") #Load common graphing functions.
 
 # ---- load-packages -----------------------------------------------------------
-library(magrittr) #Pipes
+import::from(magrittr, "%>%")
 library(ggplot2) #For graphing
 library(plotly)
 requireNamespace("scales")
